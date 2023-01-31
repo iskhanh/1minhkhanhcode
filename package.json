@@ -1,7 +1,7 @@
 {
   "name": "nextflix",
   "version": "0.1.0",
-  "homepage": " https://github.com/iskhanh/1minhkhanhcode.git/",
+  "homepage": " https://iskhanh.github.io/1minhdkhanhcode",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.3.0",
