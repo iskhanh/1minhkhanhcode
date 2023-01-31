@@ -1,0 +1,163 @@
+.wrapper {
+    width: 16.66667%;
+    background-color: #1a1a1a;
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    padding-top: 8rem;
+}
+.add_account {
+    height: 100px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+.wrap_btn {
+    padding-left: 20px;
+}
+.Log_in {
+    font-size: 1.4rem;
+    color: #000;
+    text-decoration: none;
+    background-color: #00b9ae;
+    padding: 10px 16px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid;
+    margin-right: 10px;
+    scale: (1);
+    &:hover {
+        scale: (1.1);
+        transition: all 0.3s ease;
+    }
+}
+.sign_up {
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 16px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    scale: (1);
+
+    &:hover {
+        scale: (1.1);
+        transition: all 0.3s ease;
+    }
+}
+.user_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-left: 20px;
+}
+.avt_user {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.options {
+    padding-left: 20px;
+}
+.option_item {
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    font-size: 1.7rem;
+    color: #fff;
+}
+.options.option_item.active {
+    color: #00b9ae;
+}
+.icon {
+    margin: 0 20px;
+}
+.option_item .active {
+    color: #00b9ae;
+}
+.wrap_poper {
+    padding: 0;
+}
+.poper {
+    width: 150px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    background-color: #fff;
+}
+.poper_item {
+    color: #000;
+    display: flex;
+    padding: 8px 0;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border-bottom: 1px solid #ccc;
+    &:hover {
+        background-color: #ccc;
+    }
+}
+.wrap_icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+}
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        transform: translateX(-101%);
+    }
+}
+@media only screen and (max-width: 1239px) and (min-width: 1024px) {
+    .sign_up {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .show {
+        width: 50%;
+        transform: translateX(0);
+        transition: all ease 0.3s;
+    }
+    .hide {
+        transform: translateX(-101%);
+        transition: all ease 0.3s;
+    }
+}
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    .sign_up,
+    .Log_in {
+        font-size: 1.2rem;
+        padding: 5px 8px;
+    }
+    .option_item {
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .name_user {
+        display: none;
+    }
+} ;

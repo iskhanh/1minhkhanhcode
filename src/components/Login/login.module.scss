@@ -1,0 +1,131 @@
+.wrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.children {
+    width: 500px;
+    padding: 10px 0;
+    background-color: #fff;
+    border-radius: 16px;
+    z-index: 999999;
+}
+
+.header {
+    display: flex;
+    padding: 30px 0;
+    justify-content: center;
+    position: relative;
+}
+.btn_back {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 30px;
+}
+.title {
+    color: #7777fc;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.login_option {
+    display: flex;
+    justify-content: center;
+}
+.with_google {
+    width: 140px;
+    padding: 8px;
+    background-color: #ff6868;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    margin-right: 50px;
+}
+.logo {
+    width: 24px;
+    margin-right: 8px;
+}
+.with_fb {
+    width: 140px;
+    padding: 8px;
+    background-color: #68bbff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 4px;
+}
+.form {
+    padding: 40px;
+    position: relative;
+}
+.form_group {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-size: 1.5rem;
+    color: black;
+    margin: 8px 0;
+    font-weight: 700;
+}
+.input {
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    outline: none;
+    background-color: transparent;
+}
+.text_err {
+    font-size: 1.2rem;
+    color: #f86a6a;
+}
+.submit {
+    position: absolute;
+    right: 60px;
+    background-color: #68bbff;
+    border: none;
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 8px;
+    border-radius: 8px;
+    color: #fff;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+}
+.signup {
+    margin-left: 8px;
+    color: #7777fc;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    .children {
+        width: 90%;
+    }
+    .with_google,
+    .with_fb {
+        width: 100px;
+        font-size: 1.4rem;
+    }
+    .logo {
+        width: 20px;
+    }
+}

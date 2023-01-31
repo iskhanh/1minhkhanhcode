@@ -1,0 +1,68 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+// Customize Sider
+
+body {
+    .active {
+        color: #00b9ae;
+    }
+    .slick-slide {
+        margin-left: 10px;
+        padding: 20px 0;
+        &:hover {
+            opacity: 1 !important;
+            z-index: 10;
+        }
+    }
+    .slick-prev.slick-disabled:before,
+    .slick-next.slick-disabled:before {
+        opacity: 0;
+    }
+    .slick-track {
+        display: flex;
+    }
+    .slick-next {
+        right: 20px;
+        z-index: 30;
+    }
+    .slick-prev {
+        left: 20px;
+        z-index: 30;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 40px;
+        opacity: 1;
+    }
+    .slick-prev.slick-disabled:before,
+    .slick-next.slick-disabled:before {
+        opacity: 0;
+    }
+    .slick-list {
+        &:hover .slick-slide {
+            opacity: 0.6;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        .slick-slide {
+            margin-right: -10px;
+        }
+    }
+}
