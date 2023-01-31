@@ -1,10 +1,8 @@
-import { faL } from '@fortawesome/free-solid-svg-icons';
+
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux';
-import { loading } from './loading';
 
 const Api_key = 'f9e7cbbfb886190c83c2a1dd7b9e7fa4';
-const Base_url = 'http://api.themoviedb.org/3';
+const Base_url = 'https://api.themoviedb.org/3';
 
 export const getToprate = createAsyncThunk('movie/getMovie', async (dispatch) => {
     let respon = await fetch(`${Base_url}/movie/top_rated?api_key=${Api_key}&language=en-US&page=1`);
