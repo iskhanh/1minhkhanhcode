@@ -1,8 +1,7 @@
 import classNames from 'classnames/bind';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
-import "~slick-carousel/slick/slick.css"; 
-import "~slick-carousel/slick/slick-theme.css";
+
 
 
 import styles from './contents.module.scss';
