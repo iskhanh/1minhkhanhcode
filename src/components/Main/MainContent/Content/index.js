@@ -22,7 +22,6 @@ function Content() {
             ) : (
                 <div>
                     <ContentItem data={todos.toprate} title="Popular" />
-                    <ContentItem data={todos.movie} title="Popular" />
                     <ContentItem data={todos.popular} title="Popular" />
                 </div>
             )}
