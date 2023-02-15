@@ -2,14 +2,14 @@ import classNames from 'classnames/bind';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 
-
-
 import styles from './contents.module.scss';
 
 const cx = classNames.bind(styles);
 
 function ContentItem(props) {
     const host = 'https://image.tmdb.org/t/p/original';
+    const getlocal = localStorage.getItem('data');
+
     const { data, title } = { ...props };
     const settings = {
         infinite: false,
@@ -30,7 +30,7 @@ function ContentItem(props) {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     initialSlide: 2,
                 },
@@ -38,7 +38,7 @@ function ContentItem(props) {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 },
             },
@@ -51,7 +51,7 @@ function ContentItem(props) {
             <Slider {...settings} className={cx('slider')}>
                 {data &&
                     data.results.map((img, index) => (
-                        <Link key={index} to={`detail/${img.id}`} className={cx('link')}>
+                        <Link key={index} className={cx('link')} to={getlocal ? `/detail/${img.id}` : '/login'}>
                             <div className={cx('item')}>
                                 <img className={cx('img_film')} src={host + '/' + img.poster_path} />
                                 <h2 className={cx('name_film')}>{img.name || img.title}</h2>

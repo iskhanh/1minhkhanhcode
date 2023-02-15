@@ -16,6 +16,12 @@ function Intro() {
                 url="https://vimeo.com/117500243"
                 className={cx('video_intro')}
             />
+            <div className={cx('wrap_text')}>
+                <h2 className={cx('title')}>Netflix Elite</h2>
+                <p className={cx('text')}>
+                    Netflix Elite lauch Campaing Derector:Fernanda weinfied Production Company:AWake film Agency:Akaqua
+                </p>
+            </div>
         </div>
     );
 }

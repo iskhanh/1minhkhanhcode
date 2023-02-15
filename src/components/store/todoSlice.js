@@ -1,11 +1,27 @@
-
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const Api_key = 'f9e7cbbfb886190c83c2a1dd7b9e7fa4';
 const Base_url = 'https://api.themoviedb.org/3';
+//api.themoviedb.org/3/search/movie?api_key=f9e7cbbfb886190c83c2a1dd7b9e7fa4&query=no
+//https://api.themoviedb.org/3/movie/641934/similar?api_key=f9e7cbbfb886190c83c2a1dd7b9e7fa4&language=en-US&page=1
 
 export const getToprate = createAsyncThunk('movie/getMovie', async (dispatch) => {
     let respon = await fetch(`${Base_url}/movie/top_rated?api_key=${Api_key}&language=en-US&page=1`);
+    let json = respon.json();
+    return json;
+});
+export const getUpcoming = createAsyncThunk('upcoming/getUpcoming', async (dispatch) => {
+    let respon = await fetch(`${Base_url}/movie/upcoming?api_key=${Api_key}&language=en-US&page=1`);
+    let json = respon.json();
+    return json;
+});
+export const getSimilarMovie = createAsyncThunk('similar/getSimilar', async (dispatch) => {
+    let respon = await fetch(`${Base_url}/movie/${dispatch}/similar?api_key=${Api_key}&language=en-US&page=1`);
+    let json = respon.json();
+    return json;
+});
+export const getSeach = createAsyncThunk('getSeach', async (dispatch) => {
+    let respon = await fetch(`${Base_url}/search/movie?api_key=${Api_key}&query=${dispatch}&type=less`);
     let json = respon.json();
     return json;
 });
@@ -50,6 +66,8 @@ const getMovieSlice = createSlice({
             byid: null,
             byslug: null,
             video: null,
+            seach: null,
+            similar: null,
         },
         loading: false,
         dataus: null,
@@ -57,10 +75,10 @@ const getMovieSlice = createSlice({
     reducers: {},
 
     extraReducers: {
-        [getMovie.pending]: (state, action) => {
+        [getUpcoming.pending]: (state, action) => {
             state.loading = true;
         },
-        [getMovie.fulfilled]: (state, action) => {
+        [getUpcoming.fulfilled]: (state, action) => {
             state.todos.upcoming = action.payload;
             state.loading = false;
         },
@@ -102,6 +120,15 @@ const getMovieSlice = createSlice({
         [login.fulfilled]: (state, action) => {
             state.data = action.payload;
             console.log(action.payload);
+        },
+        [getSeach.fulfilled]: (state, action) => {
+            state.todos.seach = action.payload;
+        },
+        [getSimilarMovie.fulfilled]: (state, action) => {
+            state.todos.similar = action.payload;
+        },
+        [getSimilarMovie.pending]: (state, action) => {
+            state.loading = true;
         },
     },
 });

@@ -39,7 +39,9 @@ function Navbar() {
                             <Link to={'/login'} className={cx('Log_in')}>
                                 Log in
                             </Link>
-                            <button className={cx('sign_up')}>Sign up</button>
+                            <Link to={'/signup'} className={cx('sign_up')}>
+                                Sign up
+                            </Link>
                         </div>
                     )}
                 </div>
@@ -52,9 +54,9 @@ function Navbar() {
                         <FontAwesomeIcon className={cx('icon')} icon={faVideo} />
                         <p className={cx('title')}>Popular</p>
                     </NavLink>
-                    <NavLink className={cx('option_item')} onClick={hideNav} to={'/watch/trending'}>
+                    <NavLink className={cx('option_item')} onClick={hideNav} to={'/watch/upcoming'}>
                         <FontAwesomeIcon className={cx('icon')} icon={faFire} />
-                        <p className={cx('title')}>Trending</p>
+                        <p className={cx('title')}>UpComing</p>
                     </NavLink>
                     <NavLink className={cx('option_item')} onClick={hideNav} to={'/watch/top_rated'}>
                         <FontAwesomeIcon className={cx('icon')} icon={faStar} />

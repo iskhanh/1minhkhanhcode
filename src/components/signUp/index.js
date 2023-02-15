@@ -5,13 +5,10 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
 import google from '../../asset/img/google.png';
 import fb from '../../asset/img/fb.png';
-import { login } from '../store/todoSlice';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 const cx = classNames.bind(styles);
 
 function SignUp() {
-    const dispatch = useDispatch();
     const [name, setName] = useState('');
 
     const [email, setEmail] = useState('');
@@ -29,7 +26,6 @@ function SignUp() {
 
     const [password, setPassword] = useState('');
     const [errPw, setErrPw] = useState(true);
-    const [path, setPath] = useState(false);
 
     const navigate = useNavigate();
     const handleName = () => {
@@ -38,7 +34,7 @@ function SignUp() {
         } else {
             setErrName(true);
         }
-        if (name.trim().length >= 8) {
+        if (name.trim().length >= 6 && name.trim().length <= 12) {
             setCheckName(false);
         } else {
             setCheckName(true);
@@ -122,7 +118,7 @@ function SignUp() {
         <div className={cx('wrap')}>
             <div className={cx('children')}>
                 <div className={cx('header')}>
-                    <div className={cx('btn_back')}>
+                    <div className={cx('btn_back')} onClick={() => navigate(-1)}>
                         <FontAwesomeIcon icon={faChevronLeft} />
                     </div>
                     <h2 className={cx('title')}>Sign up</h2>
@@ -152,7 +148,7 @@ function SignUp() {
                             }}
                         />
                         {(errName && <span className={cx('text_err')}>Requied</span>) ||
-                            (checkName && <span className={cx('text_err')}>Minimum of 8 characters</span>)}
+                            (checkName && <span className={cx('text_err')}>From 6 to 12 characters</span>)}
                     </div>
 
                     <div className={cx('form_group')}>

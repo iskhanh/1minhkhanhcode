@@ -56,7 +56,7 @@ function Login() {
         <div className={cx('wrap')}>
             <div className={cx('children')}>
                 <div className={cx('header')}>
-                    <div className={cx('btn_back')}>
+                    <div className={cx('btn_back')} onClick={() => navigate(-1)}>
                         <FontAwesomeIcon icon={faChevronLeft} />
                     </div>
                     <h2 className={cx('title')}>Sign in</h2>
@@ -73,7 +73,7 @@ function Login() {
                 </div>
                 <form className={cx('form')} onSubmit={handleSubmit}>
                     <div className={cx('form_group')}>
-                        <label className={cx('label')}>name address</label>
+                        <label className={cx('label')}>User name</label>
                         <input
                             className={cx('input')}
                             value={name}

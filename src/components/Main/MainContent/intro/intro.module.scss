@@ -9,8 +9,28 @@
     top: 0;
     left: 0;
 }
-.text_intro {
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 12px;
+}
+.text {
+    line-height: 25px;
+}
+
+.wrap_text {
     position: absolute;
-    top: 140px;
-    left: 30px;
+    top: 30%;
+    left: 50px;
+    width: 40%;
+}
+@media only screen and (max-width: 480px) {
+    .wrap_text {
+        top: 15%;
+        left: 20px;
+        width: 80%;
+        .title {
+            font-size: 3rem;
+        }
+    }
 }

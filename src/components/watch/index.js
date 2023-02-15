@@ -13,7 +13,6 @@ const cx = classNames.bind(styles);
 function OptionUser() {
     const getlocal = localStorage.getItem('data');
 
-    const user = false;
     const slug = useParams();
     const dispatch = useDispatch();
     const { todos } = useSelector((state) => state.movie);
@@ -43,7 +42,6 @@ function OptionUser() {
                         ))}
                 </div>
             </div>
-            <h2>ok</h2>
         </div>
     );
 }
