@@ -21,8 +21,7 @@
     text-decoration: none;
 }
 .item {
-    width: 180px;
-    height: 280px;
+ 
     flex-shrink: 0;
     flex-basis: 180px;
     margin-right: 8px;
@@ -79,8 +78,13 @@
 .slick-list {
     margin: 0 -10px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px)  and (min-width: 481px) {
     .name_film {
         font-size: 1.4rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .name_film {
+        font-size: 1.2rem;
     }
 }

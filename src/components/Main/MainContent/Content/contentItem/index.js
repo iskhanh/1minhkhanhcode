@@ -30,7 +30,7 @@ function ContentItem(props) {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     initialSlide: 2,
                 },
@@ -38,7 +38,7 @@ function ContentItem(props) {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                 },
             },
