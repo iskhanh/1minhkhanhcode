@@ -2,8 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const Api_key = 'f9e7cbbfb886190c83c2a1dd7b9e7fa4';
 const Base_url = 'https://api.themoviedb.org/3';
-//api.themoviedb.org/3/search/movie?api_key=f9e7cbbfb886190c83c2a1dd7b9e7fa4&query=no
-//https://api.themoviedb.org/3/movie/641934/similar?api_key=f9e7cbbfb886190c83c2a1dd7b9e7fa4&language=en-US&page=1
+
 
 export const getToprate = createAsyncThunk('movie/getMovie', async (dispatch) => {
     let respon = await fetch(`${Base_url}/movie/top_rated?api_key=${Api_key}&language=en-US&page=1`);
@@ -119,7 +118,6 @@ const getMovieSlice = createSlice({
         },
         [login.fulfilled]: (state, action) => {
             state.data = action.payload;
-            console.log(action.payload);
         },
         [getSeach.fulfilled]: (state, action) => {
             state.todos.seach = action.payload;
