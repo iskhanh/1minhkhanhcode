@@ -52,10 +52,11 @@ function ContentItem(props) {
                 {data &&
                     data.results.map((img, index) => (
                         <Link key={index} className={cx('link')} to={getlocal ? `/detail/${img.id}` : '/login'}>
-                            <div className={cx('item')}>
-                                <img className={cx('img_film')} src={host + '/' + img.poster_path} />
-                                <h2 className={cx('name_film')}>{img.name || img.title}</h2>
+                            <div className={cx('item')} style={{backgroundImage:`url(${host+'/' + img.poster_path})`}}>
+                               
+                                
                             </div>
+                            <h2 className={cx('name_film')}>{img.name || img.title}</h2>
                         </Link>
                     ))}
             </Slider>
