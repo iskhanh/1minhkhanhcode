@@ -7,7 +7,7 @@ import ContentItem from './contentItem';
 
 function Content() {
     const dispatch = useDispatch();
-    const { todos, status, loading, data } = useSelector((state) => state.movie);
+    const { todos, loading } = useSelector((state) => state.movie);
     console.log(todos);
 
     useEffect(() => {

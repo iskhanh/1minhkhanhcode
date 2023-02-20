@@ -12,7 +12,6 @@ const cx = classNames.bind(styles);
 
 function Login() {
     const context = useContext(navMobile);
-    const dispatch = useDispatch();
     const [name, setName] = useState('');
     const [errName, setErrNaerrName] = useState(false);
     const [checkName, setCheckName] = useState(false);
@@ -63,7 +62,7 @@ function Login() {
                 </div>
                 <div className={cx('login_option')}>
                     <div className={cx('with_google')}>
-                        <img className={cx('logo')} src={google} />
+                        <img alt='google' className={cx('logo')} src={google} />
                         <span className={cx('logo_name')}>Google</span>
                     </div>
                     <div className={cx('with_fb')}>
